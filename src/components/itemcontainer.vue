@@ -76,6 +76,12 @@
           alter('您还没选择答案哦！')
         }
       }
+    },
+    created() {
+      if (this.fatherComponent == 'home') {
+        this.initializeData()
+        document.body.style.backgroundImage = 'url(./assets/images/1-1/jpg)'
+      }
     }
   }
 </script>
