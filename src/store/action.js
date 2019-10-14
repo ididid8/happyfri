@@ -9,6 +9,7 @@ export default {
     }
   },
   initializeData({ commit }) {
+    debugger
     commit('INITIALIZE_DATA')
   }
 }

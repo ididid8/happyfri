@@ -45,7 +45,7 @@
       'timer'
     ]),
     methods: {
-      ...mapAction([
+      ...mapActions([
         'addNum', 'initializeData',
       ]),
       nextItem() {
@@ -78,9 +78,10 @@
       }
     },
     created() {
+      debugger 
       if (this.fatherComponent == 'home') {
         this.initializeData()
-        document.body.style.backgroundImage = 'url(./assets/images/1-1/jpg)'
+        document.body.style.backgroundImage = '../assets/images/1-1.jpg'
       }
     }
   }

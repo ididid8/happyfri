@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import mutations from './mutations'
-import action from './action'
+import actions from './action'
 import ajax from '../config/ajax'
+
+Vue.use(Vuex)
 
 const state = {
   level: '第一周',
@@ -170,6 +172,6 @@ const state = {
 
 export default new Vuex.Store({
   state,
-  action,
+  actions,
   mutations
 })
