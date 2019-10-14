@@ -65,7 +65,6 @@
         }
       },
       choosed(type, id) {
-        debugger
         this.choosedNum = type
         this.choosedId = id
       },
@@ -80,7 +79,6 @@
       }
     },
     created() {
-      debugger 
       if (this.fatherComponent == 'home') {
         this.initializeData()
         document.body.style.backgroundImage = '../assets/images/1-1.jpg'
