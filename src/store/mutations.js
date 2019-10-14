@@ -10,7 +10,7 @@ export default {
   },
   // 记录答案
   [REMBER_ANSWER](state, id) {
-    state.anwerid.push(id)
+    state.answerid.push(id)
   },
   // 记录做题时间
   [REMBER_TIME](state) {

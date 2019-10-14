@@ -11,10 +11,10 @@
     <div v-if="fatherComponent == 'item'">
       <div class="item_back item_container_style">
         <div class="item_list_container" v-if="itemDetail.length > 0">
-          <header class="item_title">{{ ietmDetail[itemNum - 1].topic_name }}</header>
+          <header class="item_title">{{ itemDetail[itemNum - 1].topic_name }}</header>
           <ul>
             <li v-for="(item, index) in itemDetail[itemNum - 1].topic_answer" @click="choosed(index, item.topic_answer_id)" class="item_list">
-              <span class="option_style" v-bind:class="{'has_choosed':'choosedNum == index'}">{{chooseType(index)}}</span>
+              <span class="option_style" v-bind:class="{'has_choosed':choosedNum==index}">{{chooseType(index)}}</span>
               <span class="option_detail">{{ item.answer_name }}</span>
             </li>
           </ul>
@@ -50,6 +50,7 @@
       ]),
       nextItem() {
         if(this.choosedNum !== null) {
+          this.choosedNum = null
           this.addNum(this.choosedId)
         } else {
           alert('您还没有选择答案哦！')
@@ -64,7 +65,8 @@
         }
       },
       choosed(type, id) {
-        this.chooseNum = type
+        debugger
+        this.choosedNum = type
         this.choosedId = id
       },
       submitAnswer() {
@@ -158,7 +160,7 @@
   }
   .item_title{
     font-size: 0.65rem;
-    color: #00e;
+    color: #fff;
     line-height: 0.7rem;
   }
   .item_list {
@@ -168,7 +170,7 @@
     span {
       display: inline-block;
       font-size: 0.6rem;
-      color: #00e;
+      color: #fff;
       vertical-align: middle;
     }
     .option_style {
