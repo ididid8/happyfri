@@ -41,7 +41,7 @@
     created () {
       this.computedScore()
       this.getScoreTip()
-      document.body.style.backgroundImage = 'url(../img/4-1.jpg)'
+      document.body.style.backgroundImage = 'url(./img/4-1.jpg)'
     },
     methods: {
       computedScore() {

@@ -81,7 +81,7 @@
     created() {
       if (this.fatherComponent == 'home') {
         this.initializeData()
-        document.body.style.backgroundImage = 'url(../img/1-1.jpg)'
+        document.body.style.backgroundImage = 'url(./img/1-1.jpg)'
       }
     }
   }
