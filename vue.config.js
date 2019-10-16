@@ -1,9 +1,9 @@
 const path = require('path')
 
 module.exports = {
-  outputDir: path.resolve(__dirname, './docs'),
-  assetsDir: './.',
-  publicPath: './.',
+  outputDir: process.env.NODE_ENV === 'production'? path.resolve(__dirname, './docs'): 'dist',
+  assetsDir: process.env.NODE_ENV === 'production'? './.': '',
+  publicPath: process.env.NODE_ENV === 'production'? './.': '/',
   
   chainWebpack: config => {
     
