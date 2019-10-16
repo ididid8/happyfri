@@ -1,6 +1,8 @@
 const path = require('path')
 
 module.exports = {
+  outputDir: path.resolve(__dirname, './doc'),
+  
   chainWebpack: config => {
     
     const types =  ['vue-modules', 'vue', 'normal-modules', 'normal']
